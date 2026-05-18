@@ -1,0 +1,188 @@
+/* Professional refinements for Training Pro - Final Polish */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #10b981;
+    --primary-hover: #059669;
+    --workout: #6366f1;
+    --rest: #3b82f6;
+    --idle: #475569;
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+    background-color: var(--bg-dark) !important;
+    color: #f8fafc !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header Refinement */
+.bg-gradient-to-r.from-purple-600.via-pink-600.to-orange-500 {
+    background-image: linear-gradient(to right, #1e293b, #334155) !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.text-2xl.font-black.text-white.tracking-wider {
+    font-weight: 700 !important;
+    letter-spacing: -0.04em !important;
+    text-transform: none !important;
+    background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Main Card */
+.bg-slate-900\/80.backdrop-blur-xl {
+    background-color: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 32px !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Gradients Overrides - Targeting the specific Tailwind utility combinations */
+/* Workout: from-orange-500 via-red-500 to-pink-600 */
+.from-orange-500.via-red-500.to-pink-600 {
+    background-image: linear-gradient(135deg, #818cf8, #4f46e5) !important;
+}
+
+/* Rest: from-emerald-400 via-teal-500 to-cyan-600 */
+.from-emerald-400.via-teal-500.to-cyan-600 {
+    background-image: linear-gradient(135deg, #34d399, #059669) !important;
+}
+
+/* Idle: from-blue-500 via-purple-500 to-pink-500 */
+.from-blue-500.via-purple-500.to-pink-500 {
+    background-image: linear-gradient(135deg, #475569, #1e293b) !important;
+}
+
+/* Cycle indicators active: from-orange-400 to-pink-500 */
+.from-orange-400.to-pink-500 {
+    background-image: linear-gradient(135deg, #818cf8, #4f46e5) !important;
+}
+
+/* Timer Circle */
+.w-48.h-48.rounded-full.p-1 {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02)) !important;
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06), 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.w-48.h-48 .bg-slate-900 {
+    background: #0f172a !important;
+}
+
+.text-5xl.font-black.text-white {
+    font-weight: 800 !important;
+    letter-spacing: -0.05em !important;
+}
+
+/* Progress bar */
+.h-3.bg-slate-700 {
+    background-color: rgba(30, 41, 59, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 9999px !important;
+    overflow: hidden;
+}
+[data-slot="progress-indicator"] {
+    background-image: linear-gradient(to right, #818cf8, #6366f1) !important;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* Action Buttons */
+.bg-gradient-to-r.from-green-500.to-emerald-600 {
+    background: #10b981 !important;
+    background-image: none !important;
+    border-radius: 16px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.2) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.025em !important;
+    text-transform: uppercase !important;
+}
+
+.bg-gradient-to-r.from-green-500.to-emerald-600:hover {
+    background: #059669 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px 0 rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Pause Button (Amber) */
+.from-amber-500.to-orange-600 {
+    background: #f59e0b !important;
+    background-image: none !important;
+    border-radius: 16px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 14px 0 rgba(245, 158, 11, 0.2) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.025em !important;
+    text-transform: uppercase !important;
+}
+
+.from-amber-500.to-orange-600:hover {
+    background: #d97706 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px 0 rgba(245, 158, 11, 0.3) !important;
+}
+
+/* Reset Button */
+.border-slate-600.text-slate-300 {
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 16px !important;
+    color: #cbd5e1 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.025em !important;
+    transition: all 0.3s ease !important;
+}
+
+.border-slate-600.text-slate-300:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    color: #f8fafc !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Volume Control */
+.bg-green-900\/20 {
+    background-color: rgba(16, 185, 129, 0.1) !important;
+    border: 1px solid rgba(16, 185, 129, 0.2) !important;
+}
+
+/* Cycle indicators refinement */
+.bg-slate-700.text-slate-400 {
+    background-color: #1e293b !important;
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Bottom info bar */
+.bg-slate-800\/50 {
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    border-top: 1px solid var(--glass-border) !important;
+}
+
+/* Animations Glow Refined */
+.workout-glow {
+    animation: pro-workout-glow 3s ease-in-out infinite !important;
+}
+
+@keyframes pro-workout-glow {
+    0%, 100% { box-shadow: 0 0 25px rgba(99, 102, 241, 0.15); }
+    50% { box-shadow: 0 0 50px rgba(99, 102, 241, 0.25); }
+}
+
+.rest-glow {
+    animation: pro-rest-glow 3s ease-in-out infinite !important;
+}
+
+@keyframes pro-rest-glow {
+    0%, 100% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.15); }
+    50% { box-shadow: 0 0 50px rgba(16, 185, 129, 0.25); }
+}
